@@ -1,0 +1,29 @@
+---
+import '../styles/global.css'
+import {ClientRouter} from 'astro:transitions'
+import {SITE_INFO} from "@/constants/site-info.constant.ts";
+
+interface Props {
+    title: string;
+    description?: string;
+    image?: string;
+}
+const {
+    title = SITE_INFO.title,
+    description = SITE_INFO.description,
+    image
+} = Astro.props
+---
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title}</title>
+    <ClientRouter/>
+</head>
+<body>
+<slot/>
+</body>
+</html>
