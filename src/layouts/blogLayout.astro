@@ -2,7 +2,7 @@
 import '../styles/global.css'
 import '../styles/blog.css'
 import {ClientRouter} from 'astro:transitions'
-const {frontmatter} = Astro.props
+const {title} = Astro.props
 ---
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@ const {frontmatter} = Astro.props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
-    <title>{frontmatter.title}</title>
+    <title>{title}</title>
     <ClientRouter/>
 </head>
 <body class="bg-gray-900">

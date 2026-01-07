@@ -7,6 +7,21 @@
     "paths": {
       "@/constants/*": [
         "constants/*"
+      ],
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/pages/*": [
+        "pages/*"
+      ],
+      "@/layouts/*": [
+        "layouts/*"
+      ],
+      "@/interfaces/*": [
+        "interfaces/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
       ]
     }
   }
