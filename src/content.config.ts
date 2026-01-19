@@ -11,12 +11,11 @@ import { z } from 'astro/zod';
 const blog = defineCollection({
     // type: 'content',
     loader: glob({pattern: ['*.md','*.mdx'], base: './src/data/posts'}),
-    schema: z.object({
+    schema: ({image}) =>  z.object({
         title: z.string(),
         date: z.date(),
         description: z.string(),
-        image: z.string(),
-
+        image: image(),
         author: z.string(),
         tags: z.array(z.string())
     })

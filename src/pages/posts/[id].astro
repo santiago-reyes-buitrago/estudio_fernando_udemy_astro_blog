@@ -2,6 +2,7 @@
 import type {GetStaticPaths} from "astro";
 import BlogLayout from "@/layouts/blogLayout.astro";
 import {getCollection,render} from "astro:content";
+import Image from "astro/components/Image.astro";
 export const getStaticPaths = (async () => {
     const posts = await getCollection('blog')
     return posts.map(post => ({
@@ -18,6 +19,15 @@ const {Content,headings} = await render(post);
 ---
 
 <BlogLayout title={post.data.title}>
+    <h1>{post.data.title}</h1>
+    <p>{post.data.description}</p>
+    <Image
+            class="object-cover w-full h-56 rounded-lg lg:w-64"
+            src={post.data.image}
+            alt={post.data.title}
+            width={600}
+            height={220}
+    />
     <h3>Tabla de contenidos</h3>
     <ol>
         {headings.map((heading,index) => <li>
