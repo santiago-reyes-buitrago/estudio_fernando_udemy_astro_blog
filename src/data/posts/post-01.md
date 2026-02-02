@@ -7,10 +7,10 @@ author: john-smith
 image: 'images/post-01.png'
 tags: [JavaScript, ES6, Programming]
 
-[//]: # (layout: ../../layouts/blogLayout.astro)
+# (layout: ../../layouts/blogLayout.astro)
 ---
 
-# {frontmatter.title}
+# Explorando Funciones de ES6
 
 
 

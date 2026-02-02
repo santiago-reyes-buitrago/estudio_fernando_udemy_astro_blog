@@ -1,6 +1,6 @@
 ---
 import {Formatter} from "@/utils/formatter.ts";
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 import {type CollectionEntry} from "astro:content";
 interface Props {
     post: CollectionEntry<'blog'>
@@ -11,7 +11,7 @@ const frontmatter = post.data;
 
 ---
 <div class="lg:flex">
-    <Image 
+    <Image
             class="object-cover w-full h-56 rounded-lg lg:w-64"
             src={frontmatter.image}
             alt={frontmatter.title}
