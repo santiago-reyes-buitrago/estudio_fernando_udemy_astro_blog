@@ -7,10 +7,11 @@ author: Jane Doe
 image: '/assets/images/post-01.png'
 tags: [JavaScript, ES6, Programming]
 
-[//]: # (layout: ../../layouts/blogLayout.astro)
+# (layout: ../../layouts/blogLayout.astro)
 ---
 
-# {frontmatter.title}
+[//]: # (# {frontmatter.title})
+# Explorando Funciones de ES6!!
 
 
 {/*!-- Mostrar imagen --*/}
