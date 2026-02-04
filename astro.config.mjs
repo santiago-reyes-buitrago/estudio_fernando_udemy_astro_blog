@@ -12,5 +12,5 @@ export default defineConfig({
     },
 
     integrations: [mdx()],
-    site: 'https://astro-boilerplate.com',
+    site: 'https://estudiofernandoudemyastroblog-production.up.railway.app/',
 });
